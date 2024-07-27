@@ -36,7 +36,7 @@ guess_b: list[str] = [c for c in guess];
 
 while guess != answer:
     letter: str = input("Guess a letter: ");
-    if not letter.isalpha() or len(letter) > 1:
+    if letter.isdigit() or len(letter) > 1:
         print(f"{letter} is not a valid letter, it will not be counted as a guess, guess again!!")
     else:
         g_num += 1;
