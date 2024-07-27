@@ -40,10 +40,12 @@ while guess != answer:
         print(f"{letter} is not a valid letter, it will not be counted as a guess, guess again!!")
     else:
         g_num += 1;
-
-        for i in range(len(answer)):
-            if letter == answer[i].lower() or letter == answer[i].upper():
-                guess_b[i] = answer[i];
+        if not letter in answer:
+            print(f"{letter} letter does not exist in capital");
+        else:
+            for i in range(len(answer)):
+                if letter == answer[i].lower() or letter == answer[i].upper():
+                    guess_b[i] = answer[i];
 
         guess = ''.join(guess_b);
         print(guess);
